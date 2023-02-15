@@ -29,11 +29,16 @@ button {
     background-color: #daa411;
 }
 
+.btn-row-div {
+    height: auto;
+    width: 70%;
+}
+
 .btn-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2em 35em;
+    margin: 2em 9em;
 }
 
 .btn-clear {
