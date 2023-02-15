@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lb</h1>
+    </header>
+    <div class="body">
+        <textarea name="userInputArea" id="userInputArea" cols="165" rows="10"></textarea>
+            <div class="btn-row">
+                <button onclick="sitsOrWildcards(outputArea)">SITS 'or' Wildcards</button>
+                <button onclick="removeSlashN(outputArea)">Remove /1, /2..</button>
+                <button onclick="addSlashStar(outputArea)">Add /*</button>
+            </div>
+            <div class="btn-row">
+                <button onclick="changeListToSemiColonSeparated(changeListToSemiColonSeparated)">Semicolons</button>
+                <button>Commas with Quotes</button>
+                <button>SITS Exclusion</button>
+            </div>
+            <div class="btn-row">
+                <button class="btn-yellow">Gold Semicolons</button>
+                <button class="btn-yellow">eVision Bars</button>
+                <button class="btn-yellow">Star & Bar</button>
+            </div>
+            <div class="clear-btn-grid">
+                <button class="btn-clear" onclick="clearTextArea(userInputArea)">Clear</button>
+            </div>
+            <textarea name="outputArea" id="changeListToSemiColonSeparated" cols="70" rows="10"></textarea>
+                <div class="output-btn-grid">
+                    <button>Remove Spaces</button>
+                    <button>Count Items</button>
+                </div>
+    </div>
+</body>
+<script src="scripts.js"></script>
+</html>

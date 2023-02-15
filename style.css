@@ -1,0 +1,70 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333333;
+    color: #FFBF0B;
+    padding: 2%;
+}
+
+/* Buttons */
+
+button {
+    background-color: #032e52;
+    color: #f4f4f4;
+    border: none;
+    height: 50px;
+    width: 220px;
+    /* border: #333333 3px solid; */
+    border-radius: 5px;
+}
+
+.btn-yellow {
+    background-color: #daa411;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 35em;
+}
+
+.btn-clear {
+    width: 175px;
+    background-color: brown;
+}
+
+.clear-btn-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+.output-btn-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 45em;
+}
+
+/* Text Areas */
+
+textarea {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.body {
+    
+}
