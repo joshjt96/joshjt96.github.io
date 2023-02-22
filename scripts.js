@@ -146,3 +146,44 @@ function countItems () {
      alert("The input box contains " + userString.split(/\r\n|\r|\n/).length + " items.");
     }
 };
+
+// function countItems () {
+//     let countText = [];
+//     var userString = document.getElementById("userInputArea").value;
+//     userString = userString.replace(/^\s+|\s+$/g, '')
+//     for (i = 1; i > countText.length; i++) {
+//         if (userString.length == 0) {
+//             const element = document.createElement("p");
+//                 element.textContent = "The input box is empty."
+//                 const grid = document.querySelector('.output-btn-grid')
+//                 grid.appendChild(element);
+//                 countText.push(element);
+//         }
+//         else if (userString.length == 1) {
+//             const element = document.createElement("p");
+//                 element.textContent = "The input box contains " + userString.split(/\r\n|\r|\n/).length + " item."
+//                 const grid = document.querySelector('.output-btn-grid')
+//                 grid.appendChild(element);
+//                 countText.push(element);
+//         }
+//         else {
+//             const element = document.createElement("p");
+//             element.textContent = "The input box contains " + userString.split(/\r\n|\r|\n/).length + " items."
+//             const grid = document.querySelector('.output-btn-grid')
+//             grid.appendChild(element);
+//             countText.push(element);
+//         }
+//     }
+//     if (countText.length = 1) {
+//         element.remove;
+//     };
+// };
+
+// Add count items alert to page
+
+// function addCount() {
+//     const element = document.createElement("p");
+//     const text = element.textContent("The input box contains " + userString.split(/\r\n|\r|\n/).length + " item.")
+//     const grid = document.querySelector('.output-btn-grid')
+//     grid.appendChild(element);
+// }
