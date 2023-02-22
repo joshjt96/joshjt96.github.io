@@ -45,8 +45,8 @@ function changeListToSemiColonSeparated(text) {
     document.getElementById("outputArea").select();
 };
 
-function changeListToComma(text, event) {
-    event.preventDefault();
+function changeListToComma(text) {
+    // event.preventDefault();
     var userString = document.getElementById("userInputArea").value;
     userString = userString.replace(/^\s+|\s+$/g, '')
     userString = userString.replace(new RegExp('\r?\n','g'), ',')
@@ -54,13 +54,21 @@ function changeListToComma(text, event) {
     document.getElementById("outputArea").select();
 };
 
-function changeListToDQComma(text, event) {
-    event.preventDefault();
+function changeListToDQComma(text) {
+    // event.preventDefault();
     var userString = document.getElementById("userInputArea").value;
     userString = userString.replace(/^\s+|\s+$/g, '')
     userString = '"'+userString.replace(new RegExp('\r?\n','g'), '", "')+'"'
     text.value = userString;
-    document.getElementById("textOutputArea").select();
+    document.getElementById("outputArea").select();
+};
+
+function changeListToQuotedComma(text) {
+    var userString = document.getElementById("userInputArea").value;
+    userString = userString.replace(/^\s+|\s+$/g, '')
+    userString = '\''+userString.replace(new RegExp('\r?\n','g'), '\', \'')+'\''
+    text.value = userString;
+    document.getElementById("outputArea").select();
 };
 
 function changeListToNotThisSeparated(text) {
@@ -87,8 +95,16 @@ function evisionBars(text) {
     document.getElementById("outputArea").select();
 };
 
-function starsEitherSide(text, event) {
-    event.preventDefault();
+function starAndBar(text) {
+    var userString = document.getElementById("userInputArea").value;
+    userString = userString.replace(/^\s+|\s+$/g, '')
+    userString = userString.replace(new RegExp('\r?\n','g'), '\u00B7*\u00B7|') + '\u00B7*'
+    text.value = userString;
+    document.getElementById("outputArea").select();
+};
+
+function starsEitherSide(text) {
+    // event.preventDefault();
     var userString = document.getElementById("userInputArea").value;
     userString = userString.replace(/^\s+|\s+$/g, '')
     userString = '\u00B7*' + userString.replace(new RegExp('\r?\n','g'), '\u00B7*\u00B7|\u00B7*') + '\u00B7*'
@@ -106,4 +122,27 @@ function clearTextArea(text) {
 function clearOutputArea(text) {
     text.value = " "
     document.getElementById("outputArea").focus;
+};
+
+// Output area functions
+
+function removeSpaces(text) {
+    var userString = document.getElementById("outputArea").value;
+    userString = userString.replace(/\s/g, '')
+    text.value = userString;
+    document.getElementById("outputArea").select();
+};
+
+function countItems () {
+    var userString = document.getElementById("userInputArea").value;
+    userString = userString.replace(/^\s+|\s+$/g, '')
+    if (userString.length == 0) {
+        alert("The input box is empty.");
+    }
+    else if (userString.length == 1) {
+     alert("The input box contains " + userString.split(/\r\n|\r|\n/).length + " item.");
+    }
+    else {
+     alert("The input box contains " + userString.split(/\r\n|\r|\n/).length + " items.");
+    }
 };

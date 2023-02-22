@@ -25,14 +25,15 @@ button {
     width: 220px;
     /* border: #333333 3px solid; */
     border-radius: 5px;
+    margin: 10px;
 }
 
 button:hover {
     cursor: pointer;
 }
 
-.btn-yellow {
-    background-color: #db3c00;
+.btn-orange {
+    background-color: #dd5422;
 }
 
 .btn-row-div {
