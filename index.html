@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>Lb</h1>
+        <h1>Linebeak</h1>
     </header>
     <div class="body">
         <textarea name="userInputArea" id="userInputArea" cols="165" rows="10"></textarea>
@@ -21,22 +21,25 @@
                 <button onclick="sitsOrWildcards(outputArea)">SITS 'or' Wildcards</button>
                 <button onclick="removeSlashN(outputArea)">Remove /1, /2..</button>
                 <button onclick="addSlashStar(outputArea)">Add /*</button>
+                <button onclick="changeListToSemiColonSeparated(outputArea)">Semicolons</button>
             </div>
             <div class="btn-row">
-                <button onclick="changeListToSemiColonSeparated(changeListToSemiColonSeparated)">Semicolons</button>
-                <button>Commas with Quotes</button>
-                <button>SITS Exclusion</button>
+                <button onclick="changeListToComma(outputArea)">Commas</button>
+                <button onclick="changeListToDQComma(outputArea)">DQ Commas</button>
+                <button onclick="changeListToComma(outputArea)">Commas with Quotes</button>
+                <button onclick="changeListToNotThisSeparated(outputArea)">SITS Exclusion</button>
             </div>
             <div class="btn-row">
-                <button class="btn-yellow">Gold Semicolons</button>
-                <button class="btn-yellow">eVision Bars</button>
+                <button onclick="goldSemiColons(outputArea)" class="btn-yellow">Gold Semicolons</button>
+                <button onclick="evisionBars(outputArea)" class="btn-yellow">eVision Bars</button>
                 <button class="btn-yellow">Star & Bar</button>
+                <button onclick="starsEitherSide(outputArea)" class="btn-yellow">Stars Either Side</button>
             </div>
         </div>
             <div class="clear-btn-grid">
                 <button class="btn-clear" onclick="clearTextArea(userInputArea)">Clear</button>
             </div>
-            <textarea name="outputArea" id="changeListToSemiColonSeparated" cols="70" rows="10"></textarea>
+            <textarea name="outputArea" id="outputArea" cols="70" rows="10"></textarea>
                 <div class="output-btn-grid">
                     <button>Remove Spaces</button>
                     <button>Count Items</button>

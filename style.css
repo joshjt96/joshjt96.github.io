@@ -8,8 +8,10 @@ body {
 }
 
 header {
-    background-color: #333333;
-    color: #FFBF0B;
+    /* background-color: #333333; */
+    color: #032e52;
+    background: rgb(255,128,0);
+    background: linear-gradient(90deg, rgba(255,128,0,1) 0%, rgba(219,60,0,1) 100%);
     padding: 2%;
 }
 
@@ -25,8 +27,12 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .btn-yellow {
-    background-color: #daa411;
+    background-color: #db3c00;
 }
 
 .btn-row-div {
@@ -57,7 +63,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2em 45em;
+    width: 30%;
+    /* border: 1px solid red; */
 }
 
 /* Text Areas */
@@ -72,4 +79,13 @@ textarea {
 
 .body {
     
+}
+
+/* Media Queries */
+
+@media only screen 
+and (device-width: 390px) 
+and (device-height: 844px) 
+and (-webkit-device-pixel-ratio: 3) { 
+  
 }

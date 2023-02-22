@@ -8,11 +8,11 @@ function removeFromString(text) {
 // Main button functions
 
 function sitsOrWildcards(text) {
-    var userString = document.getElementById("textInputArea").value;
+    var userString = document.getElementById("userInputArea").value;
     userString = userString.replace(/^\s+|\s+$/g, '')
     userString = userString.replace(new RegExp('\r?\n','g'), '\u00B7|')
     text.value = userString;
-    document.getElementById("textOutputArea").select();
+    document.getElementById("outputArea").select();
 };
 
 function removeSlashN(text) {
@@ -33,29 +33,68 @@ function addSlashStar(text) {
     userString = userString.replace(new RegExp('\r?\n','g'), '/\u00B7*\u00B7|')+'/\u00B7*'
     text.value = userString;
     document.getElementById("outputArea").select();
-}
+};
 
 function changeListToSemiColonSeparated(text) {
-    var userString = document.getElementById("textInputArea").value;
-    
+    var userString = document.getElementById("userInputArea").value;
     var splitByThis = ';';
-    if (textOutputArea.value == '`') splitByThis = '\u00B7;';
-       
+    if (outputArea.value == '`') splitByThis = '\u00B7;';
     userString = userString.replace(/^\s+|\s+$/g, '')
     userString = userString.replace(new RegExp('\r?\n','g'), splitByThis)
     text.value = userString;
-    document.getElementById("textOutputArea").select();
-}
+    document.getElementById("outputArea").select();
+};
 
 function changeListToComma(text, event) {
     event.preventDefault();
-    var userString = document.getElementById("textInputArea").value;
+    var userString = document.getElementById("userInputArea").value;
     userString = userString.replace(/^\s+|\s+$/g, '')
     userString = userString.replace(new RegExp('\r?\n','g'), ',')
+    text.value = userString;
+    document.getElementById("outputArea").select();
+};
+
+function changeListToDQComma(text, event) {
+    event.preventDefault();
+    var userString = document.getElementById("userInputArea").value;
+    userString = userString.replace(/^\s+|\s+$/g, '')
+    userString = '"'+userString.replace(new RegExp('\r?\n','g'), '", "')+'"'
     text.value = userString;
     document.getElementById("textOutputArea").select();
 };
 
+function changeListToNotThisSeparated(text) {
+    var userString = document.getElementById("userInputArea").value;
+    userString = userString.replace(/^\s+|\s+$/g, '')
+    userString = '\u00B7!'+userString.replace(new RegExp('\r?\n','g'), '\u00B7&\u00B7!')
+    text.value = userString;
+    document.getElementById("outputArea").select();
+};
+
+function goldSemiColons(text) {
+    var userString = document.getElementById("userInputArea").value;
+    userString = userString.replace(/^\s+|\s+$/g, '')
+    userString = userString.replace(new RegExp('\r?\n','g'), '\u00B7;')
+    text.value = userString;
+    document.getElementById("outputArea").select();
+};
+
+function evisionBars(text) {
+    var userString = document.getElementById("userInputArea").value;
+    userString = userString.replace(/^\s+|\s+$/g, '')
+    userString = userString.replace(new RegExp('\r?\n','g'), '|')
+    text.value = userString;
+    document.getElementById("outputArea").select();
+};
+
+function starsEitherSide(text, event) {
+    event.preventDefault();
+    var userString = document.getElementById("userInputArea").value;
+    userString = userString.replace(/^\s+|\s+$/g, '')
+    userString = '\u00B7*' + userString.replace(new RegExp('\r?\n','g'), '\u00B7*\u00B7|\u00B7*') + '\u00B7*'
+    text.value = userString;
+    document.getElementById("outputArea").select();
+};
 
 // Clear text functions
 
