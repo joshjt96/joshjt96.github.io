@@ -25,6 +25,14 @@ function removeSlashN(text) {
     document.getElementById("outputArea").select()
 };
 
+function addSlashOne() {
+    const inputField = document.getElementById("userInputArea");
+    let userInput = inputField.value.trim();
+
+    inputField.value = userInput + "/1";
+}
+
+
 function addSlashStar(text) {
     var userString = document.getElementById("userInputArea").value;
     userString = userString.replace(/^\s+|\s+$/g, '')
