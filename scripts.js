@@ -25,12 +25,12 @@ function removeSlashN(text) {
     document.getElementById("outputArea").select()
 };
 
-function addSlashOne() {
-    const inputField = document.getElementById("userInputArea");
-    let userInput = inputField.value.trim();
-
-    inputField.value = userInput + "/1";
+function addSlashOne(text) {
+    const input = document.getElementById("userInputArea").value.trim();
+    text.value = input + "/1";
+    document.getElementById("outputArea").select();
 }
+
 
 
 function addSlashStar(text) {
