@@ -27,7 +27,11 @@ function removeSlashN(text) {
 
 function addSlashOne(text) {
     const input = document.getElementById("userInputArea").value.trim();
-    text.value = input + "/1";
+    const lines = input
+        .split(/\r?\n/)
+        .filter(line => line.trim() !== '')
+        .map(line => line.trim() + '/1');
+    text.value = lines.join('\n');
     document.getElementById("outputArea").select();
 }
 
